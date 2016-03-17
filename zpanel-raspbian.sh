@@ -60,10 +60,9 @@ git checkout-index -a -f --prefix=../zp_install_cache/
 cd ../zp_install_cache/
 
 # Install required software and dependencies required by ZPanel.
-# We disable the DPKG prompts before we run the software install to enable fully automated install.
 apt-get install -y mysql-server mysql-server apache2 libapache2-mod-php5 libapache2-mod-bw php5-common php5-cli php5-mysql php5-gd php5-mcrypt php5-curl php-pear php5-imap php5-xmlrpc php5-xsl db4.7-util zip webalizer build-essential bash-completion dovecot-mysql dovecot-imapd dovecot-pop3d dovecot-common dovecot-managesieved dovecot-lmtpd postfix postfix-mysql libsasl2-modules-sql libsasl2-modules proftpd-mod-mysql bind9 bind9utils
 
-#php5-suhosin
+#php5-suhosin was removed cause not in oficial rep
 
 # Generation of random passwords
 password=`passwordgen`;
@@ -286,8 +285,4 @@ echo "" &>/dev/tty
 
 # We now request that the user restarts their server...
 echo "Restart your server now to complete the install" &>/dev/tty
-#while true; do
-#	case $rsn in
-#		[Yy]* ) break;;
-#		[Nn]* ) exit;
-#	esac
+
