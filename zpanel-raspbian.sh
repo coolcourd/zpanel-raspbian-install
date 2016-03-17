@@ -27,7 +27,6 @@ passwordgen() {
 echo ""
 echo "##############################################################"
 echo "# Welcome to the NOT Official ZPanelX Installer for Raspbian #"
-echo "# 				                                           #"
 echo "#                                                            #"
 echo "# Please make sure your VPS provider hasn't pre-installed    #"
 echo "# any packages required by ZPanelX.                          #"
@@ -286,7 +285,7 @@ echo "##############################################################" &>/dev/tty
 echo "" &>/dev/tty
 
 # We now request that the user restarts their server...
-echo -e "Restart your server now to complete the install" &>/dev/tty
+echo "Restart your server now to complete the install" &>/dev/tty
 #while true; do
 #	case $rsn in
 #		[Yy]* ) break;;
